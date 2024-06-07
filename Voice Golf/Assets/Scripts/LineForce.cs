@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class LineForce : MonoBehaviour
@@ -7,10 +6,10 @@ public class LineForce : MonoBehaviour
     private LineRenderer lineRenderer;
 
     [SerializeField]
-    private float stopVelocity = .05f;
-    
+    private ForceFromMicrophone micforce;
+
     [SerializeField]
-    private float shotPower = .05f;
+    private float stopVelocity = .05f;
 
     private bool isIdle;
     private bool isAiming;
@@ -59,8 +58,7 @@ public class LineForce : MonoBehaviour
         }
 
         DrawLine(worldPoint.Value);
-
-        //L'endroit ou mettre le son du micro
+        
         if (Input.GetMouseButtonUp(0))
         {
             Shoot(worldPoint.Value);
@@ -94,7 +92,8 @@ public class LineForce : MonoBehaviour
         Vector3 direction = (horizontalWorldPoint - transform.position).normalized;
         float strength = Vector3.Distance(transform.position, horizontalWorldPoint);
 
-        body.AddForce(direction * strength * shotPower);
+        //body.AddForce(direction * strength * shootforce);
+        body.AddForce(direction * micforce.force);
         isIdle = false;
     }
 

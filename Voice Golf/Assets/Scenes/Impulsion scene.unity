@@ -673,6 +673,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1193611346
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1193611348}
+  - component: {fileID: 1193611347}
+  m_Layer: 0
+  m_Name: AudioLoudnessDetetction
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1193611347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193611346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9edbb0002f048574cb0d02a8fcb8395e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sampleWindow: 64
+--- !u!4 &1193611348
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1193611346}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -20.285334, y: 27.80975, z: -16.712074}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1301569541
 GameObject:
   m_ObjectHideFlags: 0
@@ -687,6 +732,7 @@ GameObject:
   - component: {fileID: 1301569542}
   - component: {fileID: 1301569547}
   - component: {fileID: 1301569546}
+  - component: {fileID: 1301569548}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -794,8 +840,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lineRenderer: {fileID: 1994011323}
+  micforce: {fileID: 1301569548}
   stopVelocity: 0.5
-  shotPower: 150
 --- !u!54 &1301569547
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -823,6 +869,25 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 0
   m_CollisionDetection: 2
+--- !u!114 &1301569548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1301569541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 045374fa5f91e774ab2492038f70e947, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  force: 0
+  source: {fileID: 0}
+  minScale: {x: 0, y: 0, z: 0}
+  maxScale: {x: 0, y: 0, z: 0}
+  detector: {fileID: 1193611347}
+  loudnessSensibility: 100000
+  threshold: 0.1
 --- !u!1 &1565828599
 GameObject:
   m_ObjectHideFlags: 0
@@ -1175,6 +1240,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 998022204}
+  - {fileID: 1193611348}
   - {fileID: 2058599591}
   - {fileID: 628921925}
   - {fileID: 1301569545}

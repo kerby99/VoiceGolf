@@ -354,8 +354,8 @@
 -analyzer:"D:/Unity/Editor/2022.3.15f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/Scripts/AudioLoudnessDetection.cs"
 "Assets/Scripts/CameraController.cs"
+"Assets/Scripts/ForceFromMicrophone.cs"
 "Assets/Scripts/LineForce.cs"
-"Assets/Scripts/ScaleFromMicrophone.cs"
 -langversion:9.0
 
 /deterministic

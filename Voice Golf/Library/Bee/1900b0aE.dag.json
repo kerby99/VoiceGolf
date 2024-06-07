@@ -19644,8 +19644,8 @@
         "Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll",
         "Assets/Scripts/AudioLoudnessDetection.cs",
         "Assets/Scripts/CameraController.cs",
+        "Assets/Scripts/ForceFromMicrophone.cs",
         "Assets/Scripts/LineForce.cs",
-        "Assets/Scripts/ScaleFromMicrophone.cs",
         "D:/Unity/Editor/2022.3.15f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll",
         "D:/Unity/Editor/2022.3.15f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll",
         "Library/Bee/artifacts/1900b0aE.dag/Assembly-CSharp.rsp"
