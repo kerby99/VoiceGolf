@@ -886,7 +886,7 @@ MonoBehaviour:
   minScale: {x: 0, y: 0, z: 0}
   maxScale: {x: 0, y: 0, z: 0}
   detector: {fileID: 1193611347}
-  loudnessSensibility: 100000
+  loudnessSensibility: 1000
   threshold: 0.1
 --- !u!1 &1565828599
 GameObject:

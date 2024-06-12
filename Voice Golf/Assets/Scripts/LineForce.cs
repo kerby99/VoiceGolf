@@ -88,12 +88,9 @@ public class LineForce : MonoBehaviour
         lineRenderer.enabled = false;
 
         Vector3 horizontalWorldPoint = new Vector3(worldPoint.x, transform.position.y, worldPoint.z);
-
         Vector3 direction = (horizontalWorldPoint - transform.position).normalized;
-        float strength = Vector3.Distance(transform.position, horizontalWorldPoint);
 
-        //body.AddForce(direction * strength * shootforce);
-        body.AddForce(direction * micforce.force);
+        body.AddForce(direction * micforce.force, ForceMode.Impulse);
         isIdle = false;
     }
 
