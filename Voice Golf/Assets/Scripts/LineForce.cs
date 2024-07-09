@@ -14,6 +14,8 @@ public class LineForce : MonoBehaviour
     private bool isIdle;
     private bool isAiming;
 
+    private int _shots;
+
     private Rigidbody body;
 
     private void OnMouseDown()
@@ -92,6 +94,7 @@ public class LineForce : MonoBehaviour
 
         body.AddForce(direction * micforce.force, ForceMode.Impulse);
         isIdle = false;
+        _shots++;
     }
 
     private Vector3? CastMouseClickRay()
@@ -119,5 +122,15 @@ public class LineForce : MonoBehaviour
         {
             return null;
         }
+    }
+
+    public int GetShots()
+    {
+        return _shots;
+    }
+
+    public void SetShots(int shots)
+    {
+        _shots = shots;
     }
 }
