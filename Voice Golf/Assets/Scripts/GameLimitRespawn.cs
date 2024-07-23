@@ -9,6 +9,7 @@ public class GameLimitRespawn : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Ball"))
         {
+            Debug.Log(other.gameObject.tag);
             ball.Respawn();
         }
     }
